@@ -10,16 +10,17 @@ DEFAULT_YEAR = "2025"
 ERROR_MAP = {
     "nonce too low": "invalidation_nonce_low",
     "nonce too high": "invalidation_nonce_high",
-    "empty authorization list": "invalidation_auth_list_empty",
-    "invalid auth signature": "invalidation_auth_sig_invalid",
-    "authorization nonce mismatch": "invalidation_auth_nonce_mismatch",
-    "authorizer has code": "invalidation_authorizer_has_code",
-    "insufficient funds": "invalidation_insufficient_funds",
+    "nonce has max value": "invalidation_nonce_max_value",
     "intrinsic gas too low": "invalidation_intrinsic_gas",
-    "oversized data": "invalidation_oversized_data",
-    "transaction type not supported": "invalidation_type_not_supported",
-    "invalid sender": "invalidation_invalid_sender",
-    "negative value": "invalidation_negative_value"
+    "insufficient funds for gas * price + value": "invalidation_insufficient_funds",
+    "transaction size": "invalidation_oversized_data",
+    "set code tx must have at least one authorization tuple": "invalidation_auth_list_empty",
+    "EIP-7702 transaction with empty auth list": "invalidation_auth_list_empty",
+    "EIP-7702 transaction cannot be used to create contract": "invalidation_setcode_tx_create",
+    "EIP-7702 authorization chain ID mismatch": "invalidation_auth_wrong_chain_id",
+    "EIP-7702 authorization has invalid signature": "invalidation_auth_sig_invalid",
+    "EIP-7702 authorization destination is a contract": "invalidation_auth_destination_is_contract",
+    "EIP-7702 authorization nonce does not match current account nonce": "invalidation_auth_nonce_mismatch"
 }
 
 def setup_database(db_path):
