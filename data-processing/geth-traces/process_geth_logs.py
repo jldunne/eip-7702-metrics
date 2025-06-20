@@ -14,13 +14,20 @@ ERROR_MAP = {
     "intrinsic gas too low": "invalidation_intrinsic_gas",
     "insufficient funds for gas * price + value": "invalidation_insufficient_funds",
     "transaction size": "invalidation_oversized_data",
+    "transaction gas price below minimum": "gas_price_below_min",
+    "max priority fee per gas higher than max fee per gas": "max_fee_too_high",
+    "insufficient gas for floor data gas cost": "insufficient_gas_for_floor",
+    "exceeds block gas limit": "exceeds_block_gas",
     "set code tx must have at least one authorization tuple": "invalidation_auth_list_empty",
-    "EIP-7702 transaction with empty auth list": "invalidation_auth_list_empty",
+    "EIP-7702 transaction with empty auth list": "invalidation_auth_list_empty_7702",
     "EIP-7702 transaction cannot be used to create contract": "invalidation_setcode_tx_create",
     "EIP-7702 authorization chain ID mismatch": "invalidation_auth_wrong_chain_id",
     "EIP-7702 authorization has invalid signature": "invalidation_auth_sig_invalid",
     "EIP-7702 authorization destination is a contract": "invalidation_auth_destination_is_contract",
-    "EIP-7702 authorization nonce does not match current account nonce": "invalidation_auth_nonce_mismatch"
+    "EIP-7702 authorization nonce does not match current account nonce": "invalidation_auth_nonce_mismatch",
+    "gapped-nonce tx from delegated accounts": "invalidation_gapped_nonce",
+    "in-flight transaction limit reached for delegated accounts": "invalidation_tx_limit_reached",
+    "authority already reserved": "invalidation_authority_reserved"
 }
 
 def setup_database(db_path):
